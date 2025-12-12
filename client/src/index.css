@@ -33,45 +33,46 @@
   --radius-lg: var(--radius);
 }
 
-/* Light Mode (Default) - Minimalist Palette */
+/* Swiss Style - Crisp White & High Contrast */
 :root {
-  /* #F5F5F5 Warm White */
-  --background: 0 0% 96%; 
-  /* #333333 Dark Grey */
-  --foreground: 0 0% 20%; 
+  /* #FFFFFF Pure White */
+  --background: 0 0% 100%; 
+  /* #000000 Pure Black */
+  --foreground: 0 0% 0%; 
 
   /* #FFFFFF White for cards */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 20%;
+  --card-foreground: 0 0% 0%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 20%;
+  --popover-foreground: 0 0% 0%;
 
-  /* #1A1A1A Charcoal Black */
-  --primary: 0 0% 10%;
-  --primary-foreground: 0 0% 98%;
+  /* #000000 Black */
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
 
-  /* #F5F5F5 Warm White (Secondary backgrounds) */
-  --secondary: 0 0% 96%;
-  --secondary-foreground: 0 0% 10%;
+  /* #F4F4F5 Very Light Grey (Zinc-100) for subtle contrast */
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 0 0% 0%;
 
-  /* #E5E5E5 Light Grey (Muted) */
-  --muted: 0 0% 90%;
-  --muted-foreground: 0 0% 40%;
+  /* #F4F4F5 Light Grey */
+  --muted: 240 5% 96%;
+  --muted-foreground: 0 0% 45%;
 
-  /* #E5E5E5 Light Grey (Accent) */
-  --accent: 0 0% 90%;
-  --accent-foreground: 0 0% 10%;
+  /* #F4F4F5 Light Grey */
+  --accent: 240 5% 96%;
+  --accent-foreground: 0 0% 0%;
 
+  /* #EF4444 Red-500 (Swiss Red Accent for errors/highlights if needed) */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  /* #E5E5E5 Light Grey Borders */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 10%;
+  /* #E4E4E7 Zinc-200 Borders - Crisp */
+  --border: 240 5% 90%;
+  --input: 240 5% 90%;
+  --ring: 0 0% 0%;
 
-  --radius: 0rem; /* Sharp edges for this aesthetic */
+  --radius: 0rem; /* Strictly sharp edges for Swiss Style */
 }
 
 /* Dark Mode - Inverted Elegant */
