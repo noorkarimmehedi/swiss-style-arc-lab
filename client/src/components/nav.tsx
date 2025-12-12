@@ -27,7 +27,7 @@ export function Nav() {
             <a 
               key={item.label}
               href={item.href} 
-              className="text-sm font-bold tracking-widest uppercase hover:text-destructive transition-colors font-sans"
+              className="text-sm font-bold tracking-widest uppercase hover:text-destructive transition-colors font-serif"
             >
               {item.label}
             </a>
@@ -80,7 +80,7 @@ export function Nav() {
                     <span className="text-xs font-bold tracking-widest text-destructive group-hover:text-white transition-colors font-sans">
                       ({item.id})
                     </span>
-                    <span className="text-5xl font-bold tracking-tighter uppercase font-sans">
+                    <span className="text-5xl font-bold tracking-tighter uppercase font-serif">
                       {item.label}
                     </span>
                   </div>

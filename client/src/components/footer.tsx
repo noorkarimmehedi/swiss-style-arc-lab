@@ -17,7 +17,7 @@ export function Footer() {
           {/* Column 1: Email */}
           <div className="md:col-span-6 lg:col-span-4">
              <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-sans">Inquiries</span>
-             <a href="mailto:hello@arclabtechnology.com" className="text-xl md:text-2xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
+             <a href="mailto:hello@arclabtechnology.com" className="text-lg md:text-xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
               hello@arclabtechnology.com
             </a>
             <a 
