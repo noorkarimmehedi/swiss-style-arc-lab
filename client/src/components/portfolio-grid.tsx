@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import project1 from "@assets/generated_images/minimalist_branding_mockup.png";
-import project2 from "@assets/generated_images/clean_website_interface_mockup.png";
-import project3 from "@assets/generated_images/editorial_magazine_layout.png";
 
 const projects = [
   {
@@ -10,23 +7,24 @@ const projects = [
     title: "Aesop & Stone",
     category: "Branding Identity",
     year: "2024",
-    image: project1,
+    image: "/imgi_3_angonaloy.webp",
     description: "A complete brand overhaul focusing on tactile materiality and negative space."
   },
   {
     id: 2,
-    title: "Vogue Digital",
+    title: "ZAIR",
     category: "Web Platform",
     year: "2024",
-    image: project2,
-    description: "Reimagining the digital editorial experience for the modern fashion consumer."
+    image: "/imgi_6_Zair.webp",
+    description: "Reimagining the digital editorial experience for the modern fashion consumer.",
+    link: "https://zairbd.com/"
   },
   {
     id: 3,
     title: "Kinfolk",
     category: "Editorial Layout",
     year: "2023",
-    image: project3,
+    image: "/imgi_4_fakeer.webp",
     description: "Art direction and layout design for the quarterly slow-living publication."
   }
 ];
@@ -78,10 +76,10 @@ export function PortfolioGrid() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 cursor-pointer group/btn">
+              <a href={project.link || '#'} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer group/btn">
                 <span className="text-xs font-bold tracking-widest uppercase group-hover/btn:underline">View Project</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
-              </div>
+              </a>
             </div>
           </motion.div>
         ))}
