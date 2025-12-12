@@ -1,48 +1,93 @@
 import { motion } from "framer-motion";
-import heroBg from "@assets/generated_images/minimalist_architectural_hero_texture.png";
+import { ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-6 md:px-12 overflow-hidden bg-grain">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBg} 
-          alt="Abstract Architecture" 
-          className="w-full h-full object-cover opacity-20 grayscale"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+    <section className="relative min-h-screen flex flex-col justify-end pb-12 px-6 md:px-12 bg-background overflow-hidden pt-32">
+      {/* Grid Lines Background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="w-full h-full border-l border-r border-border/40 max-w-[1400px] mx-auto grid grid-cols-12 gap-4">
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+          <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <motion.span 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="block text-sm md:text-base font-medium tracking-[0.2em] text-muted-foreground mb-6 uppercase"
-        >
-          Portfolio &mdash; 2025
-        </motion.span>
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-9xl font-serif font-medium leading-[0.9] tracking-tight mb-8 text-primary"
-        >
-          Digital <br/> <i className="font-display font-light text-muted-foreground">Soul</i> & Matter
-        </motion.h1>
+        {/* Top Label */}
+        <div className="lg:col-span-12 mb-8 lg:mb-24 flex justify-between items-start border-t border-black pt-4">
+          <motion.span 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-xs font-bold tracking-tighter uppercase"
+          >
+            (EST. 2025)
+          </motion.span>
+          <motion.span 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-xs font-bold tracking-tighter uppercase text-right"
+          >
+            Zurich / New York / Tokyo
+          </motion.span>
+        </div>
 
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-xl mx-auto text-lg md:text-xl text-muted-foreground font-light leading-relaxed"
-        >
-          Crafting sophisticated digital experiences for forward-thinking brands. 
-          Specializing in minimalist interface design and strategic art direction.
-        </motion.p>
+        {/* Main Headline */}
+        <div className="lg:col-span-9">
+          <motion.h1 
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[12vw] leading-[0.8] font-sans font-bold tracking-tighter text-black mix-blend-multiply"
+          >
+            DIGITAL
+          </motion.h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[12vw] leading-[0.8] font-sans font-bold tracking-tighter text-black mix-blend-multiply ml-[10vw] lg:ml-[15vw]"
+          >
+            SYSTEMS
+          </motion.h1>
+        </div>
+
+        {/* Introduction Text */}
+        <div className="lg:col-span-3 flex flex-col justify-end mb-4">
+           <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+           >
+             <div className="w-12 h-1 bg-destructive mb-6" /> {/* Swiss Red Accent */}
+             <p className="text-sm font-medium leading-relaxed text-black max-w-[280px]">
+               We construct digital infrastructure with a focus on typographic clarity and structural precision. No fluff, just function.
+             </p>
+           </motion.div>
+        </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <span className="text-[10px] uppercase font-bold tracking-widest">Scroll</span>
+        <ArrowDown className="w-4 h-4 animate-bounce" />
+      </motion.div>
     </section>
   );
 }
