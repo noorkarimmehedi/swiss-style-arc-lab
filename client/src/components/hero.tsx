@@ -6,7 +6,13 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col justify-end pb-12 px-6 md:px-12 bg-background overflow-hidden pt-32">
       {/* Grid Lines Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="w-full h-full border-l border-r border-border/40 max-w-[1400px] mx-auto grid grid-cols-12 gap-4">
+        <div className="w-full h-full border-l border-r border-border/40 max-w-[1400px] mx-auto grid grid-cols-4 md:grid-cols-12 gap-4">
+          {/* Mobile Grid Lines */}
+          <div className="col-span-1 border-r border-border/40 h-full md:hidden" />
+          <div className="col-span-1 border-r border-border/40 h-full md:hidden" />
+          <div className="col-span-1 border-r border-border/40 h-full md:hidden" />
+          
+          {/* Desktop Grid Lines */}
           <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
           <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
           <div className="col-span-1 border-r border-border/40 h-full hidden md:block" />
