@@ -89,7 +89,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className="text-[10px] uppercase font-bold tracking-widest">Scroll</span>
         <ArrowDown className="w-4 h-4 animate-bounce" />

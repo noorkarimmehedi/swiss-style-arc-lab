@@ -17,8 +17,17 @@ export function Footer() {
           {/* Column 1: Email */}
           <div className="md:col-span-6 lg:col-span-4">
              <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-sans">Inquiries</span>
-             <a href="mailto:hello@arc.design" className="text-3xl md:text-4xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans">
+             <a href="mailto:hello@arc.design" className="text-3xl md:text-4xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
               hello@arc.design
+            </a>
+            <a 
+              href="#" 
+              className="inline-flex items-center gap-3 bg-black text-white px-6 py-4 text-xs font-bold tracking-widest uppercase hover:bg-destructive transition-colors group"
+            >
+              <span>Book a Free Call</span>
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
 
