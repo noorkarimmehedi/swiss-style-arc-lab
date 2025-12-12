@@ -29,7 +29,7 @@ export function Nav() {
             <a 
               key={item.label}
               href={item.href} 
-              className="text-sm font-bold tracking-widest uppercase hover:text-destructive transition-colors"
+              className="text-sm font-bold tracking-widest uppercase hover:text-destructive transition-colors font-sans"
             >
               {item.label}
             </a>
@@ -42,7 +42,7 @@ export function Nav() {
           className="md:hidden z-50 relative p-2 -mr-2 text-foreground flex items-center gap-2"
           aria-label="Toggle Menu"
         >
-          <span className="text-[10px] font-bold tracking-widest uppercase hidden sm:block">
+          <span className="text-[10px] font-bold tracking-widest uppercase hidden sm:block font-sans">
             {isOpen ? "Close" : "Menu"}
           </span>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -79,10 +79,10 @@ export function Nav() {
                   className="group flex items-center justify-between px-6 py-8 border-b border-black hover:bg-black hover:text-white transition-colors cursor-pointer"
                 >
                   <div className="flex items-baseline gap-6">
-                    <span className="text-xs font-bold tracking-widest text-destructive group-hover:text-white transition-colors">
+                    <span className="text-xs font-bold tracking-widest text-destructive group-hover:text-white transition-colors font-sans">
                       ({item.id})
                     </span>
-                    <span className="text-5xl font-bold tracking-tighter uppercase">
+                    <span className="text-5xl font-bold tracking-tighter uppercase font-sans">
                       {item.label}
                     </span>
                   </div>
@@ -97,12 +97,12 @@ export function Nav() {
                  className="mt-auto p-6 grid grid-cols-2 gap-6 border-t border-black bg-secondary"
               >
                  <div>
-                   <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-2">Location</span>
-                   <p className="text-sm font-bold uppercase">New York, NY</p>
+                   <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-2 font-sans">Location</span>
+                   <p className="text-sm font-bold uppercase font-sans">New York, NY</p>
                  </div>
                  <div>
-                   <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-2">Contact</span>
-                   <a href="mailto:hello@arc.design" className="text-sm font-bold uppercase underline">hello@arc.design</a>
+                   <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground mb-2 font-sans">Contact</span>
+                   <a href="mailto:hello@arc.design" className="text-sm font-bold uppercase underline font-sans">hello@arc.design</a>
                  </div>
               </motion.div>
             </div>

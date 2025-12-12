@@ -7,7 +7,7 @@ export function Footer() {
         
         {/* Massive Headline */}
         <div className="mb-24">
-          <h2 className="text-[12vw] leading-[0.8] font-bold tracking-tighter text-black uppercase">
+          <h2 className="text-[12vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-sans">
             Let's Talk
           </h2>
         </div>
@@ -16,16 +16,16 @@ export function Footer() {
           
           {/* Column 1: Email */}
           <div className="md:col-span-6 lg:col-span-4">
-             <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive">Inquiries</span>
-             <a href="mailto:hello@arc.design" className="text-3xl md:text-4xl font-bold tracking-tight hover:text-muted-foreground transition-colors">
+             <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-sans">Inquiries</span>
+             <a href="mailto:hello@arc.design" className="text-3xl md:text-4xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans">
               hello@arc.design
             </a>
           </div>
 
           {/* Column 2: Address */}
            <div className="md:col-span-3 lg:col-span-4">
-             <span className="block text-xs font-bold tracking-widest uppercase mb-6">Studio</span>
-             <address className="not-italic text-sm font-medium leading-relaxed">
+             <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-sans">Studio</span>
+             <address className="not-italic text-sm font-medium leading-relaxed font-sans">
                192 Mercer Street<br/>
                New York, NY 10012<br/>
                United States
@@ -35,8 +35,8 @@ export function Footer() {
           {/* Column 3: Social & Copyright */}
            <div className="md:col-span-3 lg:col-span-4 flex flex-col justify-between h-full">
              <div>
-               <span className="block text-xs font-bold tracking-widest uppercase mb-6">Connect</span>
-               <div className="flex flex-col gap-2 text-sm font-medium">
+               <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-sans">Connect</span>
+               <div className="flex flex-col gap-2 text-sm font-medium font-sans">
                   <a href="#" className="hover:underline">Instagram</a>
                   <a href="#" className="hover:underline">Twitter / X</a>
                   <a href="#" className="hover:underline">LinkedIn</a>
@@ -44,7 +44,7 @@ export function Footer() {
              </div>
              
              <div className="mt-12 md:mt-0">
-               <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground">
+               <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground font-sans">
                  &copy; 2025 Arc Design Systems.
                </span>
              </div>
