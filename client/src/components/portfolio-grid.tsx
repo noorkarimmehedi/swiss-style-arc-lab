@@ -8,62 +8,80 @@ const projects = [
   {
     id: 1,
     title: "Aesop & Stone",
-    category: "Branding / Identity",
+    category: "Branding Identity",
+    year: "2024",
     image: project1,
-    size: "col-span-1 md:col-span-1 lg:col-span-5",
-    aspect: "aspect-[4/3]"
+    description: "A complete brand overhaul focusing on tactile materiality and negative space."
   },
   {
     id: 2,
     title: "Vogue Digital",
-    category: "Web Design / UX",
+    category: "Web Platform",
+    year: "2024",
     image: project2,
-    size: "col-span-1 md:col-span-1 lg:col-span-7",
-    aspect: "aspect-[16/9]"
+    description: "Reimagining the digital editorial experience for the modern fashion consumer."
   },
   {
     id: 3,
-    title: "Kinfolk Editorial",
-    category: "Print / Layout",
+    title: "Kinfolk",
+    category: "Editorial Layout",
+    year: "2023",
     image: project3,
-    size: "col-span-1 md:col-span-2 lg:col-span-12",
-    aspect: "aspect-[21/9]"
+    description: "Art direction and layout design for the quarterly slow-living publication."
   }
 ];
 
 export function PortfolioGrid() {
   return (
-    <section id="work" className="py-24 px-6 md:px-12 max-w-[1400px] mx-auto">
-      <div className="flex items-end justify-between mb-16 border-b border-border pb-6">
-        <h2 className="text-3xl md:text-4xl font-serif">Selected Works</h2>
-        <span className="text-sm text-muted-foreground hidden md:block">(03)</span>
+    <section id="work" className="py-24 px-6 md:px-12 bg-background">
+      {/* Section Header */}
+      <div className="flex items-start justify-between mb-24 border-t border-black pt-4 max-w-[1400px] mx-auto">
+        <span className="text-xs font-bold tracking-tighter uppercase">(SELECTED WORKS)</span>
+        <span className="text-xs font-bold tracking-tighter uppercase text-right">001 &mdash; 003</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-32">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className={`group cursor-pointer ${project.size}`}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center group`}
           >
-            <div className={`relative overflow-hidden bg-muted ${project.aspect} mb-6`}>
+            {/* Image Side */}
+            <div className="w-full lg:w-7/12 aspect-[4/3] relative overflow-hidden bg-secondary">
+              <div className="absolute inset-0 bg-destructive/0 group-hover:bg-destructive/10 z-10 transition-colors duration-500 mix-blend-multiply" />
               <img 
                 src={project.image} 
                 alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
             </div>
-            
-            <div className="flex justify-between items-start">
+
+            {/* Text Side */}
+            <div className="w-full lg:w-5/12 flex flex-col justify-between h-full py-4">
               <div>
-                <h3 className="text-xl md:text-2xl font-serif font-medium mb-1 group-hover:text-muted-foreground transition-colors">{project.title}</h3>
-                <p className="text-sm text-muted-foreground uppercase tracking-wider">{project.category}</p>
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-xs font-bold tracking-widest text-destructive">0{project.id}</span>
+                  <div className="h-[1px] w-12 bg-border" />
+                  <span className="text-xs font-bold tracking-widest uppercase">{project.category}</span>
+                </div>
+                
+                <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-[0.9] uppercase group-hover:text-stroke-black transition-all">
+                  {project.title}
+                </h3>
+                
+                <p className="text-sm md:text-base text-muted-foreground max-w-sm mb-12 leading-relaxed">
+                  {project.description}
+                </p>
               </div>
-              <ArrowUpRight className="w-5 h-5 text-muted-foreground opacity-0 -translate-x-2 translate-y-2 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300" />
+
+              <div className="flex items-center gap-2 cursor-pointer group/btn">
+                <span className="text-xs font-bold tracking-widest uppercase group-hover/btn:underline">View Project</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
+              </div>
             </div>
           </motion.div>
         ))}
