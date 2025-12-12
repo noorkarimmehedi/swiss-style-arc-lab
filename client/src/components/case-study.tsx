@@ -1,57 +1,80 @@
 import { motion } from "framer-motion";
 import caseStudyImg from "@assets/generated_images/luxury_packaging_detail.png";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 export function CaseStudy() {
   return (
-    <section className="py-32 bg-secondary text-secondary-foreground">
+    <section className="py-24 bg-background text-foreground border-t border-black">
+       {/* Header */}
+       <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-16 flex justify-between items-end">
+          <h2 className="text-[10vw] leading-[0.8] font-bold tracking-tighter uppercase">
+            In Depth
+          </h2>
+          <span className="hidden md:block text-xs font-bold tracking-widest uppercase mb-2">
+            (Feature 01)
+          </span>
+       </div>
+
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-black">
           
+          {/* Image Side - Left */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
+            className="relative aspect-square lg:aspect-auto lg:h-[80vh] border-b lg:border-b-0 lg:border-r border-black overflow-hidden group"
           >
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground mb-6 block">
-              Case Study
-            </span>
-            <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
-              Redefining Luxury <br/> <span className="italic font-display text-muted-foreground">Tactility</span>
-            </h2>
-            <div className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed max-w-xl">
-              <p>
-                For Maison d'Etre, we explored the intersection of tactile materiality and visual minimalism. 
-                The challenge was to create a packaging system that felt as substantial as the product within.
-              </p>
-              <p>
-                Using embossed uncoated papers, silver foil stamping, and a restrained typographic palette, 
-                we achieved a sensory experience that elevates the unboxing ritual to an art form.
-              </p>
-            </div>
+            <div className="absolute inset-0 bg-destructive/0 group-hover:bg-destructive/10 z-10 transition-colors duration-500 mix-blend-multiply" />
+            <img 
+              src={caseStudyImg} 
+              alt="Maison d'Etre Packaging" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+            />
             
-            <div className="mt-10">
-              <Button variant="outline" className="rounded-none border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-sm tracking-widest uppercase transition-all">
-                View Case Study
-              </Button>
+            {/* Overlay Label */}
+            <div className="absolute top-6 left-6 z-20 bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-widest">
+              Maison d'Etre
             </div>
           </motion.div>
 
+          {/* Content Side - Right */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-1 lg:order-2"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col justify-between p-8 lg:p-16"
           >
-            <div className="relative aspect-square md:aspect-[4/5] overflow-hidden">
-              <img 
-                src={caseStudyImg} 
-                alt="Luxury Packaging Detail" 
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <div className="flex gap-4 text-xs font-bold tracking-widest uppercase mb-12 text-destructive">
+                <span>Packaging</span>
+                <span>/</span>
+                <span>Identity</span>
+                <span>/</span>
+                <span>2024</span>
+              </div>
+
+              <h3 className="text-3xl md:text-5xl font-bold tracking-tighter mb-8 leading-none uppercase">
+                Tactile <br/> Minimalism
+              </h3>
+              
+              <div className="space-y-6 text-lg md:text-xl font-medium leading-relaxed max-w-md">
+                <p>
+                  A study in reduction. We stripped away the superfluous to reveal the essential quality of the material itself.
+                </p>
+                <p className="text-muted-foreground">
+                   Embossed uncoated papers meet silver foil stamping—a sensory experience that elevates the unboxing ritual to an architectural event.
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-16 lg:mt-0 pt-8 border-t border-black/10">
+              <button className="group flex items-center gap-4 text-sm font-bold tracking-widest uppercase hover:text-destructive transition-colors">
+                <span>Read Full Case Study</span>
+                <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </button>
             </div>
           </motion.div>
 
