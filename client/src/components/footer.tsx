@@ -17,8 +17,8 @@ export function Footer() {
           {/* Column 1: Email */}
           <div className="md:col-span-6 lg:col-span-4">
              <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-sans">Inquiries</span>
-             <a href="mailto:hello@arc.design" className="text-3xl md:text-4xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
-              hello@arc.design
+             <a href="mailto:hello@arclabtechnology.com" className="text-xl md:text-2xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
+              hello@arclabtechnology.com
             </a>
             <a 
               href="#" 
@@ -54,7 +54,7 @@ export function Footer() {
              
              <div className="mt-12 md:mt-0">
                <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground font-sans">
-                 &copy; 2025 Arc Design Systems.
+                 &copy; 2025 Arc Lab Technology.
                </span>
              </div>
           </div>
