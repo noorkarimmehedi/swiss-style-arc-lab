@@ -7,7 +7,7 @@ export function Footer() {
         
         {/* Massive Headline */}
         <div className="mb-24">
-          <h2 className="text-[12vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-sans">
+          <h2 className="text-[12vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-serif">
             Let's Talk
           </h2>
         </div>

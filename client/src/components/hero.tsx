@@ -49,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[12vw] leading-[0.8] font-sans font-bold tracking-tighter text-black mix-blend-multiply"
+            className="text-[12vw] leading-[0.8] font-serif font-bold tracking-tighter text-black mix-blend-multiply"
           >
             DIGITAL
           </motion.h1>
@@ -57,7 +57,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[12vw] leading-[0.8] font-sans font-bold tracking-tighter text-black mix-blend-multiply ml-[10vw] lg:ml-[15vw]"
+            className="text-[12vw] leading-[0.8] font-serif font-bold tracking-tighter text-black mix-blend-multiply ml-[10vw] lg:ml-[15vw]"
           >
             SYSTEMS
           </motion.h1>
