@@ -16,8 +16,8 @@ export function Footer() {
           
           {/* Column 1: Email */}
           <div className="md:col-span-6 lg:col-span-4">
-             <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-sans">Inquiries</span>
-             <a href="mailto:hello@arclabtechnology.com" className="text-lg md:text-xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-sans block mb-8">
+             <span className="block text-xs font-bold tracking-widest uppercase mb-6 text-destructive font-serif">Inquiries</span>
+             <a href="mailto:hello@arclabtechnology.com" className="text-lg md:text-xl font-bold tracking-tight hover:text-muted-foreground transition-colors font-serif block mb-8">
               hello@arclabtechnology.com
             </a>
             <a 
@@ -33,8 +33,8 @@ export function Footer() {
 
           {/* Column 2: Address */}
            <div className="md:col-span-3 lg:col-span-4">
-             <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-sans">Studio</span>
-             <address className="not-italic text-sm font-medium leading-relaxed font-sans">
+             <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-serif">Studio</span>
+             <address className="not-italic text-sm font-medium leading-relaxed font-serif">
                192 Mercer Street<br/>
                New York, NY 10012<br/>
                United States
@@ -44,8 +44,8 @@ export function Footer() {
           {/* Column 3: Social & Copyright */}
            <div className="md:col-span-3 lg:col-span-4 flex flex-col justify-between h-full">
              <div>
-               <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-sans">Connect</span>
-               <div className="flex flex-col gap-2 text-sm font-medium font-sans">
+               <span className="block text-xs font-bold tracking-widest uppercase mb-6 font-serif">Connect</span>
+               <div className="flex flex-col gap-2 text-sm font-medium font-serif">
                   <a href="#" className="hover:underline">Instagram</a>
                   <a href="#" className="hover:underline">Twitter / X</a>
                   <a href="#" className="hover:underline">LinkedIn</a>
@@ -53,7 +53,7 @@ export function Footer() {
              </div>
              
              <div className="mt-12 md:mt-0">
-               <span className="block text-[10px] font-bold tracking-widest uppercase text-muted-foreground font-sans">
+               <span className="block text-sm font-bold tracking-widest uppercase text-muted-foreground font-serif">
                  &copy; 2025 Arc Lab Technology.
                </span>
              </div>
